@@ -1,0 +1,59 @@
+.plans-page {
+  padding-top: 140px; /* espacio navbar */
+  position: relative;
+  min-height: 100vh;
+
+  background-image: url("/images/especial.png"); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* capa translúcida */
+.plans-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* overlay oscuro */
+  z-index: 0;
+}
+
+/* mantener contenido encima del fondo */
+.plans-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.plans-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .plans-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BOTÓN PRINCIPAL DEL FLUJO */
+.plans-page .button {
+  background-color: #ffdd00;
+  color: #111;
+  font-weight: 900;
+  border-radius: 14px;
+  border: none;
+  padding: 14px;
+  transition: all 0.25s ease;
+}
+
+.plans-page .button:hover {
+  background-color: #ffe94d;
+  transform: translateY(-2px);
+}
+
+.plans-page .button:disabled {
+  background-color: #666;
+  color: #aaa;
+  cursor: not-allowed;
+}

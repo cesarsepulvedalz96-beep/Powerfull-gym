@@ -1,0 +1,53 @@
+.plans-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.plan-box {
+  background: #000;
+  color: #fff;
+  border: 2px solid #ffdd00;
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+}
+
+.plan-box h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.price {
+  font-size: 2rem;
+  color: #ffdd00;
+  font-weight: 900;
+}
+
+.promo {
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.plan-box ul {
+  margin-top: 12px;
+}
+
+.plan-box li {
+  margin-bottom: 6px;
+}
+
+.featured {
+  box-shadow: 0 0 30px rgba(255, 221, 0, 0.5);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ffdd00;
+  color: #000;
+  padding: 6px 12px;
+  font-weight: 800;
+  border-radius: 12px;
+}

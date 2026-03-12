@@ -1,0 +1,87 @@
+.plan-card {
+  border: 2px solid #000;
+  border-radius: 16px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%; /* Fuerza que ocupe toda la columna */
+}
+
+.card-content {
+  flex-grow: 1; /* Para que la descripción ocupe espacio igual */
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.most-chosen {
+  border-color: #ffdd00;
+}
+
+.most-chosen-tag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.card-footer {
+  margin-top: auto; /* Siempre al final de la tarjeta */
+}
+
+.plan-button {
+  transition: transform 0.3s;
+}
+
+.plan-button:hover {
+  transform: scale(1.1);
+}
+
+/* Para que todas las columnas tengan la misma altura */
+.columns.is-multiline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column.is-one-third {
+  display: flex;
+}
+
+.plan-details {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.plan-details li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Iconos ✓ o ✗ */
+.plan-details .icon {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.plan-details .icon.available {
+  color: #23d160; /* verde */
+}
+
+.plan-details .icon.not-available {
+  color: #ff3860; /* rojo */
+}
+
+/* Texto del detalle */
+.plan-details .detail-text {
+  color: #ffffff; /* blanco */
+}

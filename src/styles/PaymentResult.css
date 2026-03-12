@@ -1,0 +1,153 @@
+.result-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 20px;
+}
+
+.result-card {
+  width: 420px;
+  max-width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  background: #111;
+  border: 2px solid #ffdd00;
+  box-shadow: 0 0 40px rgba(255, 221, 0, 0.15);
+  color: #fff;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.result-card.success {
+  border-color: #00ff88;
+}
+
+.result-card.error {
+  border-color: #ff4d4d;
+}
+
+/* ICONOS */
+
+.icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #00ff88;
+  position: relative;
+  margin: 0 auto;
+  animation: pop 0.4s ease forwards;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-left: 4px solid #00ff88;
+  border-bottom: 4px solid #00ff88;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.error-mark {
+  font-size: 50px;
+  color: #ff4d4d;
+  animation: shake 0.4s ease;
+}
+
+/* TEXTOS */
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.tx-id {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.redirect {
+  font-size: 13px;
+  color: #ffdd00;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #333;
+  border-top: 4px solid #ffdd00;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ANIMACIONES */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(-6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .result-card {
+    padding: 30px;
+  }
+}

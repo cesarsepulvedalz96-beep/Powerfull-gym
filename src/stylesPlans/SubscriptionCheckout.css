@@ -1,0 +1,232 @@
+.checkout-page {
+  padding-top: 160px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* FORM */
+.checkout-form {
+  background: #111;
+  padding: 28px;
+  border-radius: 18px;
+  border: 2px solid #ffdd00;
+}
+
+.checkout-form input,
+.checkout-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  background: #fff;
+  color: #000;
+}
+
+.checkout-form select {
+  background: #ffdd00;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.error-box {
+  border: 2px solid red;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* CONSENTIMIENTO */
+.ads-consent {
+  margin-top: 12px;
+}
+
+.ads-title {
+  font-weight: bold;
+}
+
+.ads-description {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.ads-options {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ads-like {
+  font-size: 28px;
+  opacity: 0.3;
+}
+
+.like-yes,
+.like-no {
+  opacity: 1;
+}
+
+/* BOTONES */
+.checkout-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* RESUMEN */
+.checkout-summary {
+  background: #111;
+  padding: 24px;
+  border-radius: 18px;
+  border: 2px solid #ffdd00;
+  color: #fff;
+}
+
+/* MESES */
+.months-title {
+  color: #ffd400;
+  margin-bottom: 10px;
+}
+
+.months-list {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.months-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.months-list::-webkit-scrollbar-thumb {
+  background: #ffd400;
+  border-radius: 10px;
+}
+
+.month-card {
+  background: #121212;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.month-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.month-total {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #00ff7f;
+  text-align: right;
+}
+
+.contract-total {
+  color: #ffd400;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contract-total span {
+  display: block;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONSENTIMIENTO SI / NO */
+  .ads-options {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .ads-options label {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .ads-like {
+    min-width: 32px;
+    text-align: center;
+  }
+
+  .checkout-buttons {
+    flex-direction: column;
+  }
+}
+
+/* TODO el CSS que enviaste */
+/* LOADING */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-box {
+  background: #111;
+  border: 2px solid #ffdd00;
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #333;
+  border-top: 5px solid #ffdd00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.payment-mode-selector {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.payment-mode-selector button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #ffdd00;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.payment-mode-selector button.active {
+  background: #ffdd00;
+  color: #000;
+}

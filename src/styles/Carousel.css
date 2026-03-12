@@ -1,0 +1,72 @@
+/* ======================
+   CAROUSEL GYM HERO
+====================== */
+
+.gym-carousel {
+  min-height: 90vh;
+  padding: 80px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-body {
+  width: 100%;
+}
+
+.carousel-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.carousel-subtitle {
+  color: #eaeaea;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 2rem;
+  }
+}
+
+/* ======================
+   BOTÓN CTA GYM
+====================== */
+
+.button.is-warning {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button.is-warning:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.6);
+}
+
+/* ======================
+   TEXTO MOTIVACIONAL
+====================== */
+.gym-carousel p.motivation {
+  color: #ffffff;
+  font-size: 1.5rem; /* un poco más grande */
+  font-style: italic;
+  margin-top: 9rem; /* separación mayor del botón */
+  letter-spacing: 3px; /* separación de letras para mejor legibilidad */
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gym-carousel p.motivation {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,246 @@
+/* =========================
+   SEPARACIÓN GENERAL
+========================= */
+.section {
+  margin-bottom: 80px;
+}
+
+/* =========================
+   HOME WELCOME SECTION
+========================= */
+.home-welcome {
+  position: relative;
+  padding: 120px 0;
+  background-image: url("/images/pesas.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+}
+
+.home-welcome .welcome-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 221, 0, 0.65);
+  z-index: 1;
+  border-radius: 0;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 4%;
+}
+
+.home-welcome .title {
+  color: #000;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.home-welcome .title span {
+  background: #000;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.home-welcome .subtitle {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.welcome-text {
+  color: #111;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   SECCIÓN AUSPICIADORES
+========================= */
+
+.home-sponsors {
+  background: #000;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home-sponsors .title {
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.sponsors-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.sponsors-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollSponsors 50s linear infinite;
+  padding: 20px 0;
+}
+
+.sponsors-group {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  padding-right: 70px;
+}
+
+.sponsors-group img {
+  width: 140px;
+  height: 80px;
+  object-fit: contain;
+
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #ffdd00;
+
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.sponsors-group img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 221, 0, 0.4);
+}
+
+@keyframes scrollSponsors {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   HOME APP SECTION
+========================= */
+
+.home-app {
+  position: relative;
+  padding: 120px 0;
+  background-image: url("/images/pesas.png");
+  background-size: cover;
+  background-position: center;
+  border-top: 6px solid #ffdd00;
+  border-radius: 0;
+}
+
+.home-app .app-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 221, 0, 0.85);
+  z-index: 1;
+  border-radius: 0;
+}
+
+.home-app .app-content {
+  position: relative;
+  z-index: 2;
+  border-radius: 5%;
+}
+
+.home-app .title {
+  font-weight: 800;
+  color: #000;
+}
+
+.home-app p {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   APP DOWNLOADS
+========================= */
+
+.app-downloads {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.app-qr {
+  width: 160px;
+  height: 160px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.app-stores {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-stores img {
+  height: 48px;
+  transition: transform 0.3s;
+}
+
+.app-stores img:hover {
+  transform: scale(1.05);
+}
+
+.app-mockup {
+  max-height: 420px;
+  border-radius: 28px;
+  object-fit: contain;
+  box-shadow: 0 20px 45px rgba(255, 212, 95, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .home-welcome,
+  .home-app,
+  .home-sponsors {
+    padding: 80px 20px;
+  }
+
+  .sponsors-track {
+    gap: 40px;
+    animation: scrollSponsors 30s linear infinite;
+  }
+
+  .sponsors-track img {
+    height: 45px;
+  }
+
+  .app-downloads {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-mockup {
+    max-height: 320px;
+    margin-top: 30px;
+  }
+
+  .sponsors-group img {
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+  }
+}

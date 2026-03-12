@@ -1,0 +1,69 @@
+/* ======================
+   NAVBAR GYM PRO
+====================== */
+
+.gym-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+/* LOGO */
+.gym-logo {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+/* CENTRADO REAL */
+.gym-navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2re;
+}
+
+/* LINKS */
+.gym-link {
+  color: #fff !important;
+  font-weight: 600;
+  margin: 0 10px;
+  position: relative;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover animado */
+.gym-link:hover {
+  color: #ffcc00 !important;
+  transform: scale(1.1);
+}
+
+/* Línea animada debajo */
+.gym-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.gym-link:hover::after {
+  width: 60%;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .gym-navbar-center {
+    justify-content: flex-start;
+  }
+
+  .gym-link {
+    padding: 1rem;
+  }
+}

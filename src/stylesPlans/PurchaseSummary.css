@@ -1,0 +1,191 @@
+.purchase-summary {
+  background: #111;
+  color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  border: 2px solid #ffdd00;
+
+  /* 🔴 IMPORTANTE */
+  position: static; /* ya NO se mueve */
+}
+
+/* TOTAL */
+.total {
+  font-size: 1.3rem;
+  color: #ffdd00;
+  font-weight: 900;
+}
+
+/* BENEFICIOS */
+.benefits-box {
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 10px 0;
+  padding-right: 8px;
+}
+
+.benefits-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.benefits-box::-webkit-scrollbar-thumb {
+  background: #ffdd00;
+  border-radius: 10px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.benefit .icon {
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+}
+
+.benefit.ok .icon {
+  color: #00ff88;
+}
+
+.benefit.no .icon {
+  color: #ff5c5c;
+}
+
+/* DETALLE DE MENSUALIDADES */
+.payment-details {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+.payment-details h4 {
+  margin-bottom: 12px;
+  color: #ffdd00;
+  font-weight: 700;
+}
+
+/* CARRUSEL VERTICAL */
+.months-carousel {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.months-carousel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.months-carousel::-webkit-scrollbar-thumb {
+  background: #ffdd00;
+  border-radius: 10px;
+}
+
+.months-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* CAJA MES */
+.month-box {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.month-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.month-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+.month-total {
+  margin-top: 6px;
+  text-align: right;
+  font-weight: 700;
+  color: #00ff88;
+}
+
+/* TOTAL CONTRATO */
+.contract-total {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.3);
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffdd00;
+}
+
+/* 📱 AJUSTES SOLO PARA TELÉFONO */
+@media (max-width: 768px) {
+  .plans-layout > *,
+  .purchase-summary,
+  .checkout-form,
+  .checkout-summary,
+  .plans-list,
+  .plans-card {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* TITULOS */
+  .purchase-summary h3,
+  .checkout-form h2,
+  .checkout-summary h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  /* TEXTO GENERAL */
+  .purchase-summary p,
+  .checkout-form p,
+  .checkout-summary p {
+    font-size: 0.9rem;
+  }
+
+  /* INPUTS */
+  .checkout-form input,
+  .checkout-form select {
+    padding: 10px; /* 🔽 menos altos */
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  /* BENEFICIOS */
+  .benefit {
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  /* CARRUSEL MESES */
+  .months-carousel {
+    max-height: 200px; /* 🔽 más compacto */
+  }
+
+  .month-box {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .month-title {
+    font-size: 0.85rem;
+  }
+
+  .month-line {
+    font-size: 0.8rem;
+  }
+}

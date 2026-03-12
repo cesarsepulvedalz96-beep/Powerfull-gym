@@ -1,0 +1,107 @@
+.extras-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* EXTRA BOX */
+.extra-box {
+  position: relative;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  color: #fff;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+/* OCULTA CHECKBOX */
+.extra-box input {
+  display: none;
+}
+
+/* IMAGEN FONDO DIFUMINADA */
+.extra-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/sedegym.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: 0;
+  border-radius: 18px;
+}
+
+/* OVERLAY OSCURO */
+.extra-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.25);
+  z-index: 1;
+  transition: all 0.3s ease;
+  border-radius: 18px;
+}
+
+/* CONTENIDO */
+.extra-info {
+  position: relative;
+  z-index: 2;
+}
+
+.extra-info h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: inherit;
+}
+
+.extra-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.extra-info span {
+  font-weight: 700;
+  color: #ffdd00;
+}
+
+/* CUANDO ESTÁ ACTIVO */
+.extra-box.active {
+  border: 2px solid #ffdd00;
+  box-shadow: 0 0 25px rgba(255, 221, 0, 0.7);
+  transform: scale(1.02);
+  color: #000;
+}
+
+.extra-box.active::after {
+  background: rgba(255, 221, 0, 0.4);
+}
+
+.extra-box.active span {
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .extras-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .extra-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
