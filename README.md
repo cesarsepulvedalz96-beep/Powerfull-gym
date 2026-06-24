@@ -1,16 +1,95 @@
-# React + Vite
+# Powerfull Gym
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web para un gimnasio, desarrollado con React, Vite y un backend en Node.js/Express.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Powerfull Gym es una aplicación web enfocada en presentar los servicios, clases, planes y beneficios de un gimnasio.
 
-## React Compiler
+El proyecto incluye una interfaz moderna para usuarios, páginas informativas, carruseles de servicios y planes, sección de contacto y un flujo de compra o inscripción con pago simulado.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- CSS
+- Node.js
+- Express
+- React Router
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del proyecto
+
+```text
+Powerfull-gym/
+├── backend/          # Backend Node.js / Express
+├── public/           # Imágenes y archivos públicos
+├── src/              # Código fuente del frontend
+├── package.json      # Dependencias y scripts del frontend
+├── vite.config.js    # Configuración de Vite
+└── README.md
+```
+
+## Instalación
+
+Clonar el repositorio:
+
+```powershell
+git clone https://github.com/cesarsepulvedalz96-beep/Powerfull-gym.git
+cd Powerfull-gym
+```
+
+Instalar dependencias del frontend:
+
+```powershell
+npm install
+```
+
+Instalar dependencias del backend:
+
+```powershell
+cd backend
+npm install
+cd ..
+```
+
+## Ejecutar el proyecto
+
+Ejecutar el frontend:
+
+```powershell
+npm run dev
+```
+
+Ejecutar el backend en otra terminal:
+
+```powershell
+cd backend
+npm run dev
+```
+
+Por defecto:
+
+```text
+Frontend: http://localhost:5173
+Backend:  http://localhost:3001
+```
+
+## Construcción para producción
+
+Para generar la versión de producción del frontend:
+
+```powershell
+npm run build
+```
+
+Los archivos generados quedarán en:
+
+```text
+dist/
+```
+
+## Nota sobre pagos
+
+El proyecto incluye un flujo de pago simulado para pruebas y demostración.
